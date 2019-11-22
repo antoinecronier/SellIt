@@ -1,0 +1,48 @@
+﻿@model SellItCore.Entities.Product
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StockEnterAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StockEnterAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StockSelledAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StockSelledAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dictionnary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dictionnary)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

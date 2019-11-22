@@ -1,0 +1,42 @@
+﻿@model SellItCore.Entities.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StockEnterAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StockEnterAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StockSelledAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StockSelledAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dictionnary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dictionnary)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
